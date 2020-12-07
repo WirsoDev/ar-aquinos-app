@@ -30,7 +30,8 @@ server.get('/:name', (req, res)=>{
         var pathios = modelInfo.devpathios
         var description = modelInfo.description
         var element = modelInfo.element
-    
+        var color = modelInfo.color
+
         //console.log(modelsinfo)
         res.render('models.html', 
         {
@@ -38,15 +39,14 @@ server.get('/:name', (req, res)=>{
             path: path, 
             pathios: pathios,
             desc: description,
-            element: element
-    
+            element: element,
+            color:color
         }
         )   
     }else{
         res.render('nomodel.html')
     }
 })
-
 
 
 //connet server

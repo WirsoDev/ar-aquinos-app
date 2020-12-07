@@ -1,7 +1,7 @@
 .app-title {
     text-align: center;
     background-color: var(--backgroung-color);
-    padding: 45px;
+    padding: 40px;
     color: white;
     padding-bottom: 70px;
 }
@@ -11,14 +11,14 @@
     line-height: 40px;
     margin-bottom: 0;
     font-family: 'gilroy-bold';
-    font-size: 80px;
+    font-size: 70px;
 }
 
 .app-title .ano{
     padding: 0;
     margin-top: 0px;
     font-family: 'gilroy';
-    font-size: 72px;
+    font-size: 67px;
 
     margin-bottom: 10px;
 }
@@ -31,11 +31,11 @@
 
 .app-model-details{
     transform: translateY(-35px);
-    padding: 35px;
+    padding-top: 15px;
     padding-bottom: 75px;
     text-align: center;
     color: white;
-    background-color: #A8B38F;
+    background-color: #707070;
     border-radius: 40px 40px 0px 0px;
 }
 
@@ -54,7 +54,7 @@
     background-color: green;
 }
 .app-viewer-card{
-    transform: translateY(-90px);
+    transform: translateY(-95px);
     display: flex;
     flex-direction: column;
     top: 300px;
@@ -65,7 +65,7 @@
 model-viewer {
 
     width: 100%;
-    height: 200px;
+    height: 270px;
     border-radius: 40px 40px 0px 0px;
     outline: none;
     --poster-color: white;
