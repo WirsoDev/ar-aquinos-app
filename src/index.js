@@ -51,6 +51,6 @@ server.get('/:name', (req, res)=>{
 
 //connet server
 
-var port = 3000
+var port = process.env.PORT || 3000
 server.listen(port)
 
