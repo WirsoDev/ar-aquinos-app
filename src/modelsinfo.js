@@ -5,6 +5,7 @@ exports.modelsinfo ={
         'description':'Audrey sofa',
         'devpath':'/assets/3dmodels/audrey.glb',
         'devpathios':'/assets/3dmodels/audreyios.usdz',
+        'poster':'',
         'path':'',
         'pathios':''
     },
@@ -15,6 +16,7 @@ exports.modelsinfo ={
         'description':'yuro sofa',
         'devpath':'/assets/3dmodels/audrey.glb',
         'devpathios':'/assets/3dmodels/audreyios.usdz',
+        'poster':'',
         'path':'',
         'pathios':''
     }

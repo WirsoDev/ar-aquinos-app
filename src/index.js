@@ -23,22 +23,28 @@ server.get('/:name', (req, res)=>{
 
     //build path for 3d model by param name
     var name = req.params.name
+    var capName = name.charAt(0).toUpperCase() + name.slice(1)
     var modelInfo = modelsinfo[name]
-    var path = modelInfo.devpath
-    var pathios = modelInfo.devpathios
-    var description = modelInfo.description
-
-    //console.log(modelsinfo)
-    res.render('models.html', 
-    {
-        name: name, 
-        path: path, 
-        pathios: pathios,
-        desc: description
-
-    }
+    if(modelInfo){
+        var path = modelInfo.devpath
+        var pathios = modelInfo.devpathios
+        var description = modelInfo.description
+        var element = modelInfo.element
     
-    )
+        //console.log(modelsinfo)
+        res.render('models.html', 
+        {
+            name: capName, 
+            path: path, 
+            pathios: pathios,
+            desc: description,
+            element: element
+    
+        }
+        )   
+    }else{
+        res.render('nomodel.html')
+    }
 })
 
 

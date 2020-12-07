@@ -1,0 +1,85 @@
+.app-title {
+    text-align: center;
+    background-color: var(--backgroung-color);
+    padding: 45px;
+    color: white;
+    padding-bottom: 70px;
+}
+
+.app-title .name{
+    padding: 0;
+    line-height: 40px;
+    margin-bottom: 0;
+    font-family: 'gilroy-bold';
+    font-size: 80px;
+}
+
+.app-title .ano{
+    padding: 0;
+    margin-top: 0px;
+    font-family: 'gilroy';
+    font-size: 72px;
+
+    margin-bottom: 10px;
+}
+
+.app-title .atr1, .app-title .atr2{
+
+    font-family: 'gilroy';
+    font-size: 20px;
+}
+
+.app-model-details{
+    transform: translateY(-35px);
+    padding: 35px;
+    padding-bottom: 75px;
+    text-align: center;
+    color: white;
+    background-color: #A8B38F;
+    border-radius: 40px 40px 0px 0px;
+}
+
+.app-model-details h1{
+    font-family: 'gilroy-bold';
+    font-size: 45px;
+}
+
+.app-model-details p{
+    font-family: 'gilroy';
+    font-size: 20px;
+}
+
+.app-viewer-card::after{
+    content: "";
+    background-color: green;
+}
+.app-viewer-card{
+    transform: translateY(-90px);
+    display: flex;
+    flex-direction: column;
+    top: 300px;
+    border-radius: 40px 40px 0px 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+model-viewer {
+
+    width: 100%;
+    height: 200px;
+    border-radius: 40px 40px 0px 0px;
+    outline: none;
+    --poster-color: white;
+    --poster-border-radius: 40px 40px 0px 0px;
+    --progress-mask: none;
+    --progress-bar-color: var(--red-color);
+}
+
+.app-icons{
+    text-align: center;
+
+    background-color: rgb(255, 255, 255);
+    font-family: 'gilroy';
+    font-size: 10px;
+    padding: 15px;
+
+}
