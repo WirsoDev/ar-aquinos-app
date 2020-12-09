@@ -1,7 +1,7 @@
 @media (min-width: 600px) {
 
     .app{
-        padding: 25px 25px 0px 25px;
+        padding: 10px 10px 0px 10px;
     }
     .container {
       display: flex;
@@ -24,7 +24,7 @@
         top: 30px;
     }
 
-    
+
     .container > .tec{
         display: none;
     }
