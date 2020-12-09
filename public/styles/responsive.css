@@ -1,0 +1,33 @@
+@media (min-width: 600px) {
+
+    .app{
+        padding: 25px 25px 0px 25px;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 100%;
+    }
+
+    .container > .header{
+        flex: 1;
+    }
+
+    .container > .info{
+        flex: 1;
+        max-height: 100%;   
+    }
+
+    .container > .modelviewer{
+        flex: 4;
+        border-right: solid gray 2px;
+        top: 30px;
+    }
+
+    
+    .container > .tec{
+        display: none;
+    }
+
+
+  }
