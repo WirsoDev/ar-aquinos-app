@@ -1,32 +1,33 @@
+button{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: blue;
+  box-sizing: border-box;
+}
 
-  button{
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    border: none;
-    background-color: blue;
-    box-sizing: border-box;
-  }
+button[slot="hotspot-hand"]{
+  --min-hotspot-opacity: 0;
+  background-color: red;
+}
 
-  button[slot="hotspot-hand"]{
-    --min-hotspot-opacity: 0;
-    background-color: red;
-  }
+button[slot="hotspot-foot"]:not([data-visible]) {
+  background-color: rgba(179, 58, 58, 0.4);
+}
 
-  button[slot="hotspot-foot"]:not([data-visible]) {
-    background-color: transparent;
-    border: 3px solid rgb(247, 78, 78);
-  }
 
-  #annotation{
-    background-color: #b3a2a2;
-    position: absolute;
-    transform: translate(10px, 10px);
-    border-radius: 10px;
-    padding: 10px;
-  }
-  /* This keeps child nodes hidden while the element loads */
-  :not(:defined) > * {
-    display: none;
-  }
+#annotation{
+  background-color: #b3a2a2;
+  position: absolute;
+  transform: translate(10px, 10px);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+/* This keeps child nodes hidden while the element loads */
+:not(:defined) > * {
+  display: none;
+}

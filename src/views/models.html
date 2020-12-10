@@ -23,25 +23,22 @@
                 <p class="atr2">Augmented Reality </p>
             </div>
             <div class="info">
-                <h1 id="modelname">{{ name }}<span id="modelcolor" style="display: none;">{{ color }}</span></h1>
-                <p>{{ element }}</p>
+                <h1 id="modelname">{{ model.name }}<span id="modelcolor" style="display: none;">{{ model.color }}</span></h1>
+                <p>{{ model.element }}</p>
             </div>
             <div class="modelviewer">
                     <model-viewer 
-                    src={{ path }}
-                    ios-src={{ pathios }}
+                    src={{ model.devpath }}
+                    ios-src={{ model.devpathios }}
                     poster=""
-                    alt={{ desc }}
+                    alt={{ model.description }}
                     shadow-intensity="2"
                     camera-controls
-                    auto-rotate ar>
-                    <button slot="hotspot-foot" data-position="-0.8 0.01 0.35" data-normal="-0.0 0.0 0.0">
-                        <div id="annotation">Teste - Pé de metal</div>
-                      </button>
+                    auto-rotate ar>     
                 </model-viewer>
             </div>
             <div class="tec">
-                <h1>Tecnologies</h1>
+                <h1>Functions</h1>
             </div>
         </div>
         <div class="footer">
@@ -50,6 +47,7 @@
         </div>
     </div>
     <script src="/scripts/colors.js"></script>
+    <script type="module" src="/scripts/modelsdata.js"></script>
     <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
 </script>

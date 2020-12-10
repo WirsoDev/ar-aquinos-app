@@ -1,5 +1,6 @@
 exports.modelsinfo ={
     'audrey':{
+        'name': 'Audrey',
         'id': 1030,
         'color':'#A8B38F',
         'element':'3 places sofa',
@@ -8,7 +9,15 @@ exports.modelsinfo ={
         'devpathios':'/assets/3dmodels/audreyios.usdz',
         'poster':'',
         'path':'',
-        'pathios':''
+        'pathios':'',
+        'anotations':[
+            {
+                'name':'pés',
+                'position':'-0.8 0.01 0.35',
+                'description':'Pés de metal'
+            },
+        ],
+        'animations':{}
     },
 
     'yoru':{

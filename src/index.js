@@ -16,31 +16,27 @@ nunjucks.configure('src/views', {
 
 //routs
 server.get('/', (req, res)=>{
-    res.render('index.html')
+    data = [{ title: "foo", id: 1 }, { title: "bar", id: 2}]
+
+    res.render('index.html', {data:data})
 })
+
 
 server.get('/:name', (req, res)=>{
 
     //build path for 3d model by param name
     var name = req.params.name
-    var capName = name.charAt(0).toUpperCase() + name.slice(1)
     var modelInfo = modelsinfo[name]
     if(modelInfo){
-        var path = modelInfo.devpath
-        var pathios = modelInfo.devpathios
-        var description = modelInfo.description
-        var element = modelInfo.element
-        var color = modelInfo.color
-
-        //console.log(modelsinfo)
+        var model = modelInfo
+        var anotations = modelInfo.anotations
+        var data = [{ title: "foo", id: 1 }, { title: "bar", id: 2}]
+        console.log(anotations)
         res.render('models.html', 
         {
-            name: capName, 
-            path: path, 
-            pathios: pathios,
-            desc: description,
-            element: element,
-            color:color
+            model: model,
+            anotations:anotations,
+            data:data
         }
         )   
     }else{
