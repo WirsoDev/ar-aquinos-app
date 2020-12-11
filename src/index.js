@@ -16,9 +16,7 @@ nunjucks.configure('src/views', {
 
 //routs
 server.get('/', (req, res)=>{
-    data = [{ title: "foo", id: 1 }, { title: "bar", id: 2}]
-
-    res.render('index.html', {data:data})
+    res.render('index.html')
 })
 
 
@@ -28,15 +26,18 @@ server.get('/:name', (req, res)=>{
     var name = req.params.name
     var modelInfo = modelsinfo[name]
     if(modelInfo){
+
+        var functions = modelInfo.animations
+        var controler = false
+        if(functions.length > 0){
+            controler = true
+        }
         var model = modelInfo
-        var anotations = modelInfo.anotations
-        var data = [{ title: "foo", id: 1 }, { title: "bar", id: 2}]
-        console.log(anotations)
         res.render('models.html', 
         {
             model: model,
-            anotations:anotations,
-            data:data
+            functions:functions,
+            controler:controler,
         }
         )   
     }else{
@@ -48,5 +49,5 @@ server.get('/:name', (req, res)=>{
 //connet server
 
 var port = 3000
-server.listen(process.env.PORT || port, ()=>{console.log('Server up ate port' + port)})
+server.listen(process.env.PORT || port, ()=>{console.log('Server up at port - ' + port)})
 

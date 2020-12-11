@@ -88,6 +88,37 @@ model-viewer {
     font-size: 20px;
 }
 
+.container > .tec h1{
+    padding: 5px;
+    font-size: 30px;
+}
+
+.container > .tec p{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.icons{
+    display: flex;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.icons img{
+    margin: 10px;
+    cursor: pointer;
+}
+
+.activ{
+    background-color: rgb(182, 56, 56);
+    border: solid rgb(182, 56, 56) 3px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+
 .footer{
     text-align: center;
     padding: 10px;

@@ -34,12 +34,27 @@
                     alt={{ model.description }}
                     shadow-intensity="2"
                     camera-controls
-                    auto-rotate ar>     
+                    autoplay 
+                    auto-rotate ar
+                    >     
                 </model-viewer>
             </div>
-            <div class="tec">
-                <h1>Functions</h1>
-            </div>
+                {% if controler %}
+                <div class="tec">
+                    <h1>Functions</h1>
+                    <p>click on the function icon</p>
+                    <div class="icons">
+                        <div >
+                            <img src="/assets/icons/NOANIM.svg" alt="noanim"  class="item activ" data-path={{model.devpath}} data-pathios={{ model.devpathios }}>
+                        </div>
+                        {% for icons in functions %}
+                            <div data-id={{icons.id}}>
+                                <img src={{icons.icon}} alt={{icons.name}}  class="item" data-path={{icons.path}} data-pathios={{icons.pathios}}>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
         </div>
         <div class="footer">
             <img src="/assets/img/aquinos.svg" alt="">
@@ -47,7 +62,7 @@
         </div>
     </div>
     <script src="/scripts/colors.js"></script>
-    <script type="module" src="/scripts/modelsdata.js"></script>
+    <script src="/scripts/animations.js"></script>
     <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
 </script>

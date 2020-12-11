@@ -17,18 +17,42 @@ exports.modelsinfo ={
                 'description':'Pés de metal'
             },
         ],
-        'animations':{}
+        'animations':[]
     },
 
-    'yoru':{
-        'id': 1030,
-        'color':'#313D4F',
+    'leora':{
+        'name': 'Leora',
+        'id': 1091,
+        'color':'#7CAB98',
         'element':'Corner sofa',
-        'description':'yuro sofa',
-        'devpath':'',
-        'devpathios':'',
+        'description':'Leora sofa',
+        'devpath':'/assets/3dmodels/LEORA/LEORA.glb',
+        'devpathios':'/assets/3dmodels/LEORA/LEORAIOS.usdz',
         'poster':'',
         'path':'',
-        'pathios':''
+        'pathios':'',
+        'anotations':[
+            {
+                'name':'pés',
+                'position':'-0.8 0.01 0.35',
+                'description':'Pés de metal'
+            },
+        ],
+        'animations':[
+            {
+                'id':1,
+                'name':'cabeceiras',
+                'icon':'/assets/icons/rocking.svg',
+                'path':'/assets/3dmodels/LEORA/LEORA_ANIM1.glb',
+                'pathios':'/assets/3dmodels/LEORA/LEORA_ANIM1IOS.usdz',
+            },
+            {
+                'id':2,
+                'name':'corrediças',
+                'icon':'/assets/icons/slider.svg',
+                'path':'/assets/3dmodels/LEORA/LEORA_ANIM2.glb',
+                'pathios':'/assets/3dmodels/LEORA/LEORA_ANIM2IOS.usdz',
+            }
+        ]
     }
 }
