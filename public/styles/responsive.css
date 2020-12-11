@@ -28,13 +28,13 @@
 
     .container > .modelviewer{
         flex: 4;
-        border-right: solid gray 2px;
+        border-right: solid rgb(197, 197, 197) 2px;
         top: 30px;
     }
 
 
     .container > .tec{
-        display: none;
+        flex: 1;
     }
 
 
