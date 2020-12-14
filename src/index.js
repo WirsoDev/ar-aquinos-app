@@ -41,9 +41,16 @@ server.get('/:name', (req, res)=>{
         }
         )   
     }else{
-        res.render('nomodel.html')
+        res.status(404)
+        res.render('404.html');
     }
 })
+
+
+server.use(function(req, res, next) {
+    res.status(404);
+    res.render('404.html');
+});
 
 
 //connet server

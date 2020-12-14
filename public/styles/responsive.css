@@ -14,7 +14,7 @@
     }
 
     .container > .header > .name{
-        margin-top: 300px;
+        margin-top: 60px;
     }
 
     .container > .info{
@@ -23,12 +23,12 @@
     }
 
     .container > .info h1{
-        margin-top: 320px;
+        margin-top: 70px;
     }
 
     .container > .modelviewer{
         flex: 4;
-        border-right: solid rgb(197, 197, 197) 2px;
+        border-right: solid rgb(197, 197, 197) 1px;
         top: 30px;
     }
 

@@ -1,0 +1,45 @@
+.home{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 90%;
+    width: 100%;
+}
+
+.intro{
+    background-color: white;
+    flex: 8;
+    margin-top: 0px;
+}
+
+.intro h1{
+    font-family: 'gilroy-bold';
+    font-size: 200px;
+}
+
+.intro p{
+    font-family: 'gilroy';
+    font-size: 180px;
+    line-height: 90px;
+    color: rgb(51, 51, 51);
+}
+
+.footer{
+    flex: 1;
+    background-color: rgb(51, 51, 51);
+    padding: 30px;
+}
+
+
+.footer p{
+    font-family: 'gilroy';
+    color: white;
+    font-size: 10px;
+}
