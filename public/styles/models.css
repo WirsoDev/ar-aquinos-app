@@ -27,13 +27,13 @@
 }
 
 .container > .header{
-    flex: 2;
+    flex: 1;
     padding: 10px;
     background-color: var(--backgroung-color);
 }
 
 .container > .header > .name{
-    margin-top: 17px;
+    margin-top: 20px;
     font-family: 'gilroy-bold';
     font-size: 50px;
 }
@@ -47,7 +47,7 @@
 
 .container > .header > .atr1, .atr2{
     font-family: 'gilroy';
-    font-size: 12px;
+    font-size: 15px;
 }
 
 
@@ -55,7 +55,7 @@
     flex: 1;
     padding: 10px;
     background-color: var(--backgroung-color);
-    max-height: 200px;
+    max-height: 120px;
 }
 
 .container > .info h1{

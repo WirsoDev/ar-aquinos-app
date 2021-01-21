@@ -54,5 +54,27 @@ exports.modelsinfo ={
                 'pathios':'/assets/3dmodels/LEORA/LEORA_ANIM2IOS.usdz',
             }
         ]
+    },
+
+    'yoru':{
+        'name': 'Yoru',
+        'id': 1114,
+        'color':'#78683D',
+        'element':'3 places sofa',
+        'description':'Yory sofa',
+        'devpath':'/assets/3dmodels/YORU/YORUAR.glb',
+        'devpathios':'/assets/3dmodels/YORU/YORUIOS.usdz',
+        'poster':'',
+        'path':'',
+        'pathios':'',
+        'anotations':[
+            {
+                'name':'pés',
+                'position':'-0.8 0.01 0.35',
+                'description':'Pés de metal'
+            },
+        ],
+        'animations':[
+        ]
     }
 }
