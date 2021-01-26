@@ -5,6 +5,7 @@ const { modelsinfo } = require('./modelsinfo')
 
 //set up server
 server.use(express.static('public'))
+server.use(express.json())
 
 //template engine
 const nunjucks = require('nunjucks')
@@ -17,6 +18,7 @@ nunjucks.configure('src/views', {
 //routs
 server.get('/', (req, res)=>{
     res.render('index.html')
+    
 })
 
 
@@ -24,6 +26,7 @@ server.get('/:name', (req, res)=>{
 
     //build path for 3d model by param name
     var name = req.params.name
+    //console.log(name)
     var modelInfo = modelsinfo[name]
     if(modelInfo){
 
@@ -44,6 +47,12 @@ server.get('/:name', (req, res)=>{
         res.status(404)
         res.render('404.html');
     }
+})
+
+server.post('/:name', (req, res)=>{
+    /*get location and model data to
+    add to google sheets*/
+    console.log(req.body)
 })
 
 
