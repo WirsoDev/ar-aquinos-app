@@ -5,7 +5,7 @@ require('dotenv').config()
 
 
 async function getDoc () {
-    const doc = new GoogleSpreadsheet('1InywoyrdD4XopRqt9BlBr0Heg22vbZsVOg5E4AXNb0U');
+    const doc = new GoogleSpreadsheet(process.env.SHEET_ID);
     
     await doc.useServiceAccountAuth({
         client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
