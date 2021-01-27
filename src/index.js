@@ -15,10 +15,12 @@ async function acessSpreadsheet(){
     console.log(sheet)
 }
 
+acessSpreadsheet()
+
 ///https://docs.google.com/spreadsheets/d/1InywoyrdD4XopRqt9BlBr0Heg22vbZsVOg5E4AXNb0U/edit#gid=0
 ///https://www.youtube.com/watch?v=UGN6EUi4Yio&t=561s
 
-acessSpreadsheet()
+
 
 //set up server
 server.use(express.static('public'))
