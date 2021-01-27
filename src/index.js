@@ -60,6 +60,7 @@ server.post('/:name', (req, res)=>{
     let modelname = req.body.modelName
     let lat = req.body.lat
     let lon = req.body.lon
+    let device = req.body.device
 
     // sheeeeets
     if(lat || lon){
@@ -70,7 +71,8 @@ server.post('/:name', (req, res)=>{
                 ModelName: modelname,
                 Latitude: lat,
                 Longitude: lon,
-                date: new Date()
+                date: new Date(),
+                Device: device
             }).then(() => {
                 console.log('New data saved!')
             })
