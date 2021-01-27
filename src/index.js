@@ -1,30 +1,15 @@
 const express = require('express')
 const server = express()
 const { modelsinfo } = require('./modelsinfo')
+const { getDoc } = require('./sheets')
 
-///////////////////// set up google sheets
-const GoogleSpreadsheet = require('google-spreadsheet')
-const { promisify } = require('util')
-const creds = require('./client_secret.json')
-
-async function acessSpreadsheet(){
-    const doc = new GoogleSpreadsheet('1InywoyrdD4XopRqt9BlBr0Heg22vbZsVOg5E4AXNb0U')
-    await promisify(doc.useServiceAccountAuth)(creds)
-    const info = await promisify(doc.getInfo)()
-    const sheet = info.worksheets[0]
-    console.log(sheet)
-}
-
-acessSpreadsheet()
-
-///https://docs.google.com/spreadsheets/d/1InywoyrdD4XopRqt9BlBr0Heg22vbZsVOg5E4AXNb0U/edit#gid=0
-///https://www.youtube.com/watch?v=UGN6EUi4Yio&t=561s
-
+require('dotenv').config()
 
 
 //set up server
 server.use(express.static('public'))
 server.use(express.json())
+
 
 //template engine
 const nunjucks = require('nunjucks')
@@ -72,6 +57,27 @@ server.post('/:name', (req, res)=>{
     /*get location and model data to
     add to google sheets*/
     console.log(req.body)
+    let modelname = req.body.modelName
+    let lat = req.body.lat
+    let lon = req.body.lon
+
+    // sheeeeets
+    if(lat || lon){
+        let sheet; 
+        getDoc().then(doc => {
+            sheet = doc.sheetsByIndex[0];
+            sheet.addRow({
+                ModelName: modelname,
+                Latitude: lat,
+                Longitude: lon,
+                date: new Date()
+            }).then(() => {
+                console.log('New data saved!')
+            })
+        });
+    }else{
+        console.log('No geolocation detected!')
+    }
 })
 
 
