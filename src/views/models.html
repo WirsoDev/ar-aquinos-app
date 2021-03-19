@@ -28,14 +28,16 @@
             </div>
             <div class="modelviewer">
                     <model-viewer 
+                    id="reveal"
                     src={{ model.devpath }}
                     ios-src={{ model.devpathios }}
-                    poster=""
+                    poster="/assets/img/loading.svg"
                     alt={{ model.description }}
                     shadow-intensity="2"
-                    exposure="5"
+                    exposure="6"
                     environment-image="/assets/img/hdr.jpg"
                     camera-controls
+                    disable-zoom
                     autoplay 
                     auto-rotate ar
                     >     
@@ -60,7 +62,7 @@
         </div>
         <div class="footer">
             <img src="/assets/img/aquinos.svg" alt="">
-            <p>All rights reserved | aquinos 2021</p>
+            <p>All rights reserved | aquinos 2021 | Alpha release</p>
         </div>
     </div>
     <script src="/scripts/colors.js"></script>

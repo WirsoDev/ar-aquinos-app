@@ -71,6 +71,10 @@ model-viewer {
     border: none;
   }
 
+.modelviewer#reveal{
+    background: black;
+}
+
 .container > .modelviewer{
     flex: 3;
 
