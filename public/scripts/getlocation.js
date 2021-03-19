@@ -1,12 +1,9 @@
   if ('geolocation' in navigator){
-      console.log('OK')
       navigator.geolocation.getCurrentPosition(possition => {
           const lat = possition.coords.latitude
           const lon = possition.coords.longitude
 
-
           const modelName = window.location.pathname.replace('/', '')
-          console.log(modelName)
 
           // Divice type
 
@@ -22,7 +19,6 @@
           }
 
           const data = { lat, lon, modelName, device}
-          console.log(data)
 
           const options = {
               method: 'POST',

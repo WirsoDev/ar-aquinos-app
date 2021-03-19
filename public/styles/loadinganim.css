@@ -1,0 +1,86 @@
+.loadanim{
+    background-color: white;
+    display: flex;
+    position: fixed;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: opacity 1s ease-in-out 5s;
+}
+
+
+.loading-container h1{
+    font-family: 'gilroy-bold';
+    font-size: 150px;
+    line-height: 75px;
+    animation: title 1.3s ease-in-out;
+}
+
+.loading-container > p{
+    font-family: 'gilroy';
+    font-size: 138px;
+    color: gray;
+    animation: title 1.3s ease-in-out;
+}
+
+.loading-desc{
+    margin-top: 70px;
+    animation: sub 1.3s ease-in-out; 
+
+}
+
+.loading-desc h3{
+    font-size: 40px;
+    font-family: 'gilroy-bold';
+}
+
+.loading-desc p{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-family: 'gilroy';
+}
+
+.loading-desc span{
+    font-family: 'gilroy';
+    font-size: 15px;
+    color: gray;
+    font-style: italic;
+
+}
+
+@keyframes title{
+    from{
+        transform: translate(0px, 200px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes sub{
+    0%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes opacity{
+    to{
+        opacity: 0;
+    }
+}
+
+.remove{
+    display: none;
+}
