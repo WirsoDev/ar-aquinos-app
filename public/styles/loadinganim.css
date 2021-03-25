@@ -5,25 +5,45 @@
     z-index: 99;
     width: 100vw;
     height: 100vh;
-
     justify-content: center;
     align-items: center;
     text-align: center;
-    animation: opacity 1s ease-in-out 5s;
+    animation: opacity 1s ease-out 7s;
 }
 
+.loadanim::after{
+    content: "";
+    background-image: url('../assets/img/CIARA_AMB_F.jpg');
+    background-size: cover;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    animation: image 7s ease-in;
+}
+
+.loading-cont{
+    background-color: rgba(139, 139, 139, 0.3);
+    height: 500px;
+    padding: 60px;
+    backdrop-filter:  blur(0.6rem);
+    border-radius: 15px;
+}
 
 .loading-container h1{
     font-family: 'gilroy-bold';
-    font-size: 150px;
+    font-size: 120px;
     line-height: 75px;
     animation: title 1.3s ease-in-out;
 }
 
 .loading-container > p{
     font-family: 'gilroy';
-    font-size: 138px;
-    color: gray;
+    font-size: 110px;
+    color: rgb(255, 255, 255);
     animation: title 1.3s ease-in-out;
 }
 
@@ -34,8 +54,9 @@
 }
 
 .loading-desc h3{
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'gilroy-bold';
+    color: white;
 }
 
 .loading-desc p{
@@ -43,6 +64,7 @@
     margin-top: 10px;
     margin-bottom: 15px;
     font-family: 'gilroy';
+    color: white;
 }
 
 .loading-desc span{
@@ -52,6 +74,7 @@
     font-style: italic;
 
 }
+
 
 @keyframes title{
     from{
@@ -78,6 +101,17 @@
 @keyframes opacity{
     to{
         opacity: 0;
+    }
+}
+
+@keyframes image{
+    from{
+        opacity: 0.8;
+        transform: scale(1.4);
+    }
+    to{
+        opacity: 0.4;
+        transform: scale(1);
     }
 }
 

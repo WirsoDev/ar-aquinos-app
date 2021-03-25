@@ -3,11 +3,12 @@ const modelname = document.querySelector('#model-name')
 const colorItem = document.querySelector('#modelcolor').innerHTML
 
 console.log(modelname)
-modelname.style.color = colorItem
+modelname.style.borderBottom  = `5px solid ${colorItem}`
+
 
 let time
 function timeHandler(){
-    time = setTimeout(loadinghandler, 5600)
+    time = setTimeout(loadinghandler, 7500)
 }
 
 

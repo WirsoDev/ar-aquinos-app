@@ -1,26 +1,41 @@
 .error{
-    font-family: 'gilroy-bold';
-    background-color: white;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
     height: 100vh;
     width: 100vw;
     background-image: url('/assets/animations/404.svg');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto;
-    color: var(--red-color);
+    justify-content: center;
+    align-items: center;
+    
 }
 
-.error-title{
-    padding: 50px;
-    padding-bottom: 0px;
-    margin-top: 50px;
-    font-size: 100px;
-    background-color: rgba(122, 122, 122, 0.4);
+.error-title-cont{
+    display: flex;
+    text-align: center;
+    font-family: 'Gilroy';
+    background-color: rgba(219, 219, 219, 0.3);
+    height: 40%;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter:  blur(0.4rem);
+    border-radius: 8px;
 }
 
-.error p{
-    font-size: 35px;
-    background-color: rgba(122, 122, 122, 0.4);
+.cont{
     padding: 30px;
+}
+
+.cont h1{
+    font-family: 'gilroy-bold';
+    font-size: 100px;
+    color: var(--red-color);
+    margin-bottom: 10px;
+}
+
+.cont p{
+    font-size: 30px;
 }
