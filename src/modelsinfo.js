@@ -6,7 +6,7 @@ exports.modelsinfo ={
         'element':'3 places sofa',
         'description':'Audrey sofa',
         'devpath':'/assets/3dmodels/AUDREY/audrey_02.glb',
-        'devpathios':'/assets/3dmodels/AUDREY/audreyios_02.usdz',
+        'devpathios':'/assets/3dmodels/AUDREY/audreyios_03.usdz',
         'poster':'',
         'path':'',
         'pathios':'',
