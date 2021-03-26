@@ -12,10 +12,11 @@
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
     <script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-    <title>AR aquinos app</title>
+    <title>AR Aquinos</title>
 </head>
 <body>
     <div class="loadanim">
+        <img src={{ model.amb }} alt="" class="loading-image">
         <div class="loading-cont">
             <div class="loading-container">
                 <h1>MIA</h1>
@@ -51,7 +52,7 @@
                     ios-src={{ model.devpathios }}
                     alt={{ model.description }}
                     shadow-intensity="2"
-                    exposure="5"
+                    exposure="6"
                     environment-image="/assets/img/hdr.jpg"
                     camera-controls
                     autoplay 
