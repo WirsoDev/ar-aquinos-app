@@ -33,6 +33,7 @@
     border-radius: 15px;
 }
 
+
 .loading-container h1{
     font-family: 'gilroy-bold';
     font-size: 120px;
@@ -65,6 +66,7 @@
     margin-bottom: 15px;
     font-family: 'gilroy';
     color: white;
+    line-height: 30px;
 }
 
 .loading-desc span{

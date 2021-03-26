@@ -1,4 +1,4 @@
-@media (min-width: 1000px) {
+@media (min-width: 550px) {
 
     .app{
         padding: 10px 10px 0px 10px;
@@ -39,3 +39,10 @@
 
 
   }
+
+  @media (max-width: 500px){
+      .loading-cont{
+          border-radius: 0px;
+      }
+  }
+

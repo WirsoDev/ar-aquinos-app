@@ -2,6 +2,7 @@ const express = require('express')
 const server = express()
 const { modelsinfo } = require('./modelsinfo')
 const { getDoc } = require('./sheets')
+const device = require('express-device')
 
 require('dotenv').config()
 
@@ -9,10 +10,12 @@ require('dotenv').config()
 //set up server
 server.use(express.static('public'))
 server.use(express.json())
+server.use(device.capture())
 
 
 //template engine
 const nunjucks = require('nunjucks')
+const { json } = require('express')
 nunjucks.configure('src/views', {
     express: server,
     noCache: true
@@ -30,8 +33,9 @@ server.get('/:name', (req, res)=>{
 
     //build path for 3d model by param name
     var name = req.params.name
-    //console.log(name)
     var modelInfo = modelsinfo[name]
+    var isDesktop = req.device.type === 'desktop'
+
     if(modelInfo){
 
         var functions = modelInfo.animations
@@ -45,6 +49,7 @@ server.get('/:name', (req, res)=>{
             model: model,
             functions:functions,
             controler:controler,
+            isdektop:isDesktop
         }
         )   
     }else{
@@ -56,7 +61,7 @@ server.get('/:name', (req, res)=>{
 server.post('/:name', (req, res)=>{
     /*get location and model data to
     add to google sheets*/
-    console.log(req.body)
+    //console.log(req.body)
     let modelname = req.body.modelName
     let lat = req.body.lat
     let lon = req.body.lon
