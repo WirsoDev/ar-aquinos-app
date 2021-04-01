@@ -74,7 +74,7 @@ exports.modelsinfo ={
         'element':'Modular sofa',
         'description':'Angie sofa',
         'devpath':'/assets/3dmodels/ANGIE/ANGIE.glb',
-        'devpathios':'/assets/3dmodels/ANGIE/angieios.usdz',
+        'devpathios':'/assets/3dmodels/ANGIE/angieios_02.usdz',
         'poster':'',
         'path':'',
         'pathios':'',
