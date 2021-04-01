@@ -12,8 +12,9 @@
 }
 
 .loading-image{
-    background-size: cover;
-    background-position: center;
+    background-size: auto;
+    width: auto;
+    height: 100vh;
     opacity: 0.4;
     position: absolute;
     z-index: -1;
@@ -21,10 +22,10 @@
 }
 
 .loading-cont{
-    background-color: rgba(139, 139, 139, 0.3);
+    background-color: rgba(233, 233, 233, 0.1);
     height: 500px;
     padding: 60px;
-    backdrop-filter:  blur(0.6rem);
+    backdrop-filter:  blur(0.8rem);
     border-radius: 15px;
 }
 
@@ -104,11 +105,11 @@
 @keyframes image{
     from{
         opacity: 0.8;
-        transform: scale(1.2);
+        transform: scale(1.4);
     }
     to{
         opacity: 0.4;
-        transform: scale(1.4);
+        transform: scale(1);
     }
 }
 
