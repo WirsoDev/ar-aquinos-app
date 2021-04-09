@@ -1,0 +1,15 @@
+.qr-cont{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'gilroy';
+}
+
+.qr{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}

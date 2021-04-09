@@ -38,24 +38,30 @@ server.get('/:name', (req, res)=>{
 
     if(modelInfo){
 
-        var functions = modelInfo.animations
-        var controler = false
-        if(functions.length > 0){
-            controler = true
+        if(isDesktop){
+            res.render('qrcode.html')
         }
-        var model = modelInfo
-        res.render('models.html', 
-        {
-            model: model,
-            functions:functions,
-            controler:controler,
-            isdektop:isDesktop
+        else{
+            var functions = modelInfo.animations
+            var controler = false
+            if(functions.length > 0){
+                    controler = true
+                }
+            var model = modelInfo
+            res.render('models.html', 
+            {
+                model: model,
+                functions:functions,
+                controler:controler,
+                isdektop:isDesktop
+            }
+            )            
         }
-        )   
-    }else{
-        res.status(404)
-        res.render('404.html');
-    }
+   
+        }else{
+            res.status(404)
+            res.render('404.html');
+        }
 })
 
 server.post('/:name', (req, res)=>{
