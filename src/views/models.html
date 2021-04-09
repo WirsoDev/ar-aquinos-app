@@ -41,32 +41,40 @@
                 <h1 id="modelname">{{ model.name }}<span id="modelcolor" style="display: none;">{{ model.color }}</span></h1>
                 <p>{{ model.element }}</p>
             </div>
-            <div class="modelviewer">
-                {% if isdektop %}
-                    <div class="ar-desable">
-                        <p>Open on your mobile device to enable AR</p>
-                    </div>
-                {% endif %}
-                    <model-viewer
-                    src={{ model.devpath }}
-                    ios-src={{ model.devpathios }}
-                    alt={{ model.description }}
-                    shadow-intensity="2"
-                    exposure="6"
-                    environment-image="/assets/img/hdr.jpg"
-                    camera-controls
-                    autoplay 
-                    auto-rotate ar
-                    >
+            {% if model.devpath == false %}
+                <div class="modelnone">
+                    <img src="/assets/icons/sad.svg" alt="sad face">
+                    <h1>Model not available yet!</h1>
+                    <a href="./audrey" id="btnexemple">See example model</a>
+                </div>
+            {% else %}
+                <div class="modelviewer">
                     {% if isdektop %}
-                        <a slot="ar-button" id="ar-button-desable"></a>
-                    {% else %}
-                        <button slot="ar-button" id="ar-button">
-                            See in your space<span><img src="/assets/img/ar-icon.svg" alt=""></span>
-                        </button>
+                        <div class="ar-desable">
+                            <p>Open on your mobile device to enable AR</p>
+                        </div>
                     {% endif %}
-                </model-viewer>
-            </div>
+                    <model-viewer
+                            src={{ model.devpath }}
+                            ios-src={{ model.devpathios }}
+                            alt={{ model.description }}
+                            shadow-intensity="2"
+                            exposure="6"
+                            environment-image="/assets/img/hdr.jpg"
+                            camera-controls
+                            autoplay 
+                            auto-rotate ar
+                            >
+                            {% if isdektop %}
+                                <a slot="ar-button" id="ar-button-desable"></a>
+                            {% else %}
+                                <button slot="ar-button" id="ar-button">
+                                    See in your space<span><img src="/assets/img/ar-icon.svg" alt=""></span>
+                                </button>
+                            {% endif %}
+                    </model-viewer>
+                </div>
+            {% endif %}
                 {% if controler %}
                 <div class="tec">
                     <h1>Functions</h1>
