@@ -1,10 +1,9 @@
-const qrname = document.getElementById('qrname')
-const modelname = qrname.getAttribute('data-modelname')
-
 const qrcodecanvas = document.getElementById("qrcode")
 
+const url = window.location.href
+
 var qrcode = new QRCode(qrcodecanvas, {
-   text: "/" + modelname,
+   text: url,
    width: 130,
    height: 130,
    colorDark : "#000000",

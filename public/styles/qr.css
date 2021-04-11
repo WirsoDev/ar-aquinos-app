@@ -11,5 +11,66 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.qr h3{
+    margin-top: 50px;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.qr h4{
+    font-size: 25px;
+}
+
+.qr h5{
+    margin-top: 40px;
+    font-size: 13px;
+}
+
+.qr-logo{
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.qr-logo h1{
+    font-family: 'gilroy-bold';
+    font-size: 70px;
+}
+
+.qr-cont p{
+    line-height: 25px;
+    font-size: 64px;
+}
+
+#byaquinos{
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+a{
+    font-family: 'gilroy-bold';
+    text-decoration: none;
+    color: black;
+    transition: 400ms ease-in;
+}
+
+a::after{
+    content: '';
+    background-color: black;
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    transition: 300ms;
+    color: white;
+}
+
+a:hover::after{
+    width: 180px;
+    content: " Go to Aquinosgroup.com";
+    background-color: black;
+    color: white;
+    transform: translateX(-150px);
+    padding: 5px;
     
 }
