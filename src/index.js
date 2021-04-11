@@ -39,7 +39,8 @@ server.get('/:name', (req, res)=>{
     if(modelInfo){
 
         if(isDesktop){
-            res.render('qrcode.html')
+            let modelname = modelInfo.name
+            res.render('qrcode.html', {modelname: modelname})
         }
         else{
             var functions = modelInfo.animations
