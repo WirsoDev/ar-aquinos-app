@@ -106,11 +106,11 @@
 @keyframes image{
     from{
         opacity: 0.9;
-        transform: scale(1.4);
+        transform: scale(1.5);
     }
     to{
         opacity: 0.9;
-        transform: scale(1);
+        transform: scale(1.3);
     }
 }
 
