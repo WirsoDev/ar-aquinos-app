@@ -89,6 +89,29 @@ exports.modelsinfo ={
         ]
     },
 
+    'angie2':{
+        'name': 'Angie2',
+        'id': 1122,
+        'color':'#1F2C35',
+        'amb':'/assets/img/ambs/angie.jpg',
+        'element':'Modular sofa',
+        'description':'Angie sofa',
+        'devpath':'/assets/3dmodels/ANGIE/ANGIE2.glb',
+        'devpathios':'/assets/3dmodels/ANGIE/ANGIE2IOS.usdz',
+        'poster':'',
+        'path':'',
+        'pathios':'',
+        'anotations':[
+            {
+                'name':'pés',
+                'position':'-0.8 0.01 0.35',
+                'description':'Pés de metal'
+            },
+        ],
+        'animations':[
+        ]
+    },
+
     'aiden':{
         'name': 'Aiden',
         'id': 1122,
