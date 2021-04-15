@@ -35,6 +35,10 @@ server.get('/:name', (req, res)=>{
     var name = req.params.name
     var modelInfo = modelsinfo[name]
     var isDesktop = req.device.type === 'desktop'
+    // fix for IPAD !!!!!!!!!!!!!!
+    isDesktop = false
+
+    console.log(req.body)
 
     if(modelInfo){
 

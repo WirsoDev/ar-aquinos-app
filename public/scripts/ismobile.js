@@ -1,4 +1,24 @@
 const ua = navigator.userAgent
+const ios = navigator.platform
+
+
+var data = (
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+)
+
+let isIos = false
+
+if(data.includes(ios)){
+    console.log('WIN')
+    isIos = true
+}
+
+console.log(isIos)
 
 let device
 
@@ -11,7 +31,8 @@ if(/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)){
     }
 
     
-var data = {device}
+var data = {device, isIos}
+console.log(device)
 
 const options = {
     method: 'POST',
