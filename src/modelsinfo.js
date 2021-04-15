@@ -208,7 +208,7 @@ exports.modelsinfo ={
         'name': 'Ciara',
         'id': 1124,
         'color':'#4A4A4D',
-        'amb':'/assets/img/ambs/cameron.jpg',
+        'amb':'/assets/img/ambs/ciara.jpg',
         'element':'Modular sofa',
         'description':'Ciara sofa',
         'devpath':'/assets/3dmodels/CIARA/CIARA.glb',
