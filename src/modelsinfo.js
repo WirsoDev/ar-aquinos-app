@@ -188,8 +188,8 @@ exports.modelsinfo ={
         'amb':'/assets/img/ambs/cameron.jpg',
         'element':'Modular sofa',
         'description':'Angie sofa',
-        'devpath':'/assets/3dmodels/CAMERON/CAMERON2.glb',
-        'devpathios':'/assets/3dmodels/CAMERON/CAMERON2IOS.usdz',
+        'devpath':'/assets/3dmodels/CAMERON/CAMERON3.glb',
+        'devpathios':'/assets/3dmodels/CAMERON/CAMERON3IOS.usdz',
         'poster':'',
         'path':'',
         'pathios':'',
@@ -202,5 +202,28 @@ exports.modelsinfo ={
         ],
         'animations':[
         ]
-    }
+    },
+
+    'ciara':{
+        'name': 'Ciara',
+        'id': 1124,
+        'color':'#4A4A4D',
+        'amb':'/assets/img/ambs/cameron.jpg',
+        'element':'Modular sofa',
+        'description':'Ciara sofa',
+        'devpath':'/assets/3dmodels/CIARA/CIARA.glb',
+        'devpathios':'/assets/3dmodels/CIARA/CIARAIOS.usdz',
+        'poster':'',
+        'path':'',
+        'pathios':'',
+        'anotations':[
+            {
+                'name':'pés',
+                'position':'-0.8 0.01 0.35',
+                'description':'Pés de metal'
+            },
+        ],
+        'animations':[
+        ]
+    },
 }
