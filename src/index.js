@@ -27,11 +27,6 @@ server.get('/', (req, res)=>{
 
     var modelsArray = Object.values(modelsinfo)
 
-    for(models in modelsArray){
-        console.log(modelsArray[models].name)
-    }
-
-
     res.render('index.html', {model: modelsArray})
     
 })
@@ -43,8 +38,6 @@ server.get('/:name', (req, res)=>{
     var name = req.params.name
     var modelInfo = modelsinfo[name]
     var isDesktop = req.device.type === 'desktop'
-
-    console.log(req.body)
 
     if(modelInfo){
 

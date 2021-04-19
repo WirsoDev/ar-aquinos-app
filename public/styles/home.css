@@ -126,6 +126,19 @@
 
     .model-card{
         margin: 5px;
+        width: 150px;
+        height: 200px;
+    }
+
+}
+
+
+@media (max-width: 370px){
+
+    .model-card{
+        margin: 3px;
+        width: 120px;
+        height: 170px;
     }
 
 }
