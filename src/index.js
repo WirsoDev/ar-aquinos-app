@@ -24,7 +24,15 @@ nunjucks.configure('src/views', {
 
 //routs
 server.get('/', (req, res)=>{
-    res.render('index.html')
+
+    var modelsArray = Object.values(modelsinfo)
+
+    for(models in modelsArray){
+        console.log(modelsArray[models].name)
+    }
+
+
+    res.render('index.html', {model: modelsArray})
     
 })
 
@@ -35,8 +43,6 @@ server.get('/:name', (req, res)=>{
     var name = req.params.name
     var modelInfo = modelsinfo[name]
     var isDesktop = req.device.type === 'desktop'
-    // fix for IPAD !!!!!!!!!!!!!!
-    isDesktop = false
 
     console.log(req.body)
 

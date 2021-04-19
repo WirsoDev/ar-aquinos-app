@@ -2,6 +2,8 @@
     width: 100vw;
     height: 100vh;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .intro{
@@ -9,32 +11,90 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 90%;
-    width: 100%;
-}
-
-.intro{
     background-color: white;
-    flex: 8;
+    flex: 4;
     margin-top: 0px;
 }
 
 .intro h1{
     font-family: 'gilroy-bold';
-    font-size: 200px;
+    font-size: 100px;
 }
 
 .intro p{
     font-family: 'gilroy';
-    font-size: 180px;
-    line-height: 90px;
-    color: rgb(51, 51, 51);
+    font-size: 95px;
+    line-height: 30px;
+    color: rgb(158, 158, 158);
 }
+
+
+.models{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex: 10;
+    padding: 20px;
+    font-family: 'gilroy';
+    flex-wrap: wrap;
+    max-width: 1000px;
+    scroll-behavior: auto;
+}
+
+.model-card{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    width: 150px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    text-align: center;
+    border-radius: 4px;
+    transition: 400ms ease-in-out;
+}
+
+.model-card:hover{
+    opacity: 0.5;
+    transform: translate(0px, -5px);
+}
+
+.model-card:active{
+    opacity: 0.5;
+    transform: translate(0px, -5px);
+}
+
+.model-card h2{
+    opacity: 1;
+    width: 80%;
+    padding: 5px;
+    background-color: white;
+}
+
+.model-card p{
+    background-color: white;
+    width: 80%;
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: rgb(235, 66, 66);
+}
+
+
+
 
 .footer{
     flex: 1;
-    background-color: rgb(51, 51, 51);
-    padding: 30px;
+    background-color: rgb(158, 158, 158);
+    padding: 10px;
+}
+
+.footer img{
+    margin-top: 20px;
 }
 
 

@@ -13,6 +13,16 @@
                 <h1>MIA</h1>
                 <p>2021</p>
             </div>
+            <div class="models">
+                {% for models in model %}
+                    <div class="model-card" style="background-image: url('{{ models.amb }}');">
+                        <h2>{{models.name}}</h2>
+                        {% if models.devpath == false %}
+                            <p>Model not available</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
             <div class="footer">
                 <img src="/assets/img/aquinos.svg" alt="">
                 <p>All rights reserved | aquinos 2021 | Alpha release v0.0.5</p>
